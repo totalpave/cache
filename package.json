@@ -1,0 +1,45 @@
+{
+  "name": "@totalpave/cache",
+  "version": "1.0.0",
+  "description": "Cache abstraction",
+  "main": "lib/api.js",
+  "types": "lib/api.d.ts",
+  "dependencies": {
+    "@types/node": "12.12.24"
+  },
+  "devDependencies": {
+    "@totalpave/eslint-plugin": "2.3.2",
+    "@types/jasmine": "3.5.0",
+    "@typescript-eslint/eslint-plugin": "2.14.0",
+    "@typescript-eslint/parser": "2.14.0",
+    "eslint": "6.8.0",
+    "jasmine": "3.5.0",
+    "jasmine-spec-reporter": "4.2.1",
+    "nyc": "15.0.0",
+    "ts-node": "8.5.4",
+    "tsutils": "3.17.1",
+    "typedoc": "0.15.6",
+    "typescript": "3.5.3"
+  },
+  "scripts": {
+    "lint": "node --max_old_space_size=6144 ./node_modules/eslint/bin/eslint.js --ext .ts '?(src|spec)/**/*.ts' --cache",
+    "build": "npm run lint && tsc",
+    "test": "npm run-script lint && nyc --reporter=lcov --reporter=text ts-node ./spec/support/jasmine.ts",
+    "docs": "typedoc --options typedoc.json",
+    "prepublishOnly": "npm run-script build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totalpave/cache.git"
+  },
+  "keywords": [
+    "Cache",
+    "abstraction"
+  ],
+  "author": "norman.breau@totalpave.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/totalpave/cache/issues"
+  },
+  "homepage": "https://github.com/totalpave/cache#readme"
+}
