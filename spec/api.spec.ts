@@ -1,13 +1,13 @@
-import {Cache} from '../src/Cache';
+import {AsyncCache} from '../src/AsyncCache';
+import {SyncCache} from '../src/SyncCache';
 import * as api from '../src/api';
-import DefaultCache from '../src/api';
 
 describe('Public API', () => {
-    it('Cache', () => {
-        expect(api.Cache).toBe(Cache);
+    it('AsyncCache', () => {
+        expect(api.AsyncCache).toBe(AsyncCache);
     });
 
-    it('Cache (Default)', () => {
-        expect(DefaultCache).toBe(Cache);
+    it('SyncCache', () => {
+        expect(api.SyncCache).toBe(SyncCache);
     });
 });

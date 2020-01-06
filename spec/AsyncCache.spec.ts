@@ -1,11 +1,11 @@
 
-import {Cache} from '../src/Cache';
+import {AsyncCache} from '../src/AsyncCache';
 
 let data: any = {
     fname: "John"
 };
 
-class TestCache extends Cache<string> {
+class TestCache extends AsyncCache<string> {
     protected async _fetch(key: string): Promise<string> {
         return Promise.resolve((data[key]));
     }

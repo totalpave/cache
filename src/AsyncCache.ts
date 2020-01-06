@@ -1,10 +1,9 @@
 
-interface ICache<T> {
-    [key: string]: T;
-}
+import {ICacheData} from './ICacheData';
+import {ICache} from './ICache';
 
-export abstract class Cache<T> {
-    private _cache: ICache<T>;
+export abstract class AsyncCache<T> implements ICache {
+    private _cache: ICacheData<T>;
 
     public constructor() {
         this._cache = {};

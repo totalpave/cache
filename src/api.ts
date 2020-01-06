@@ -1,4 +1,3 @@
 
-import {Cache} from './Cache';
-export * from './Cache';
-export default Cache;
+export * from './AsyncCache';
+export * from './SyncCache';
