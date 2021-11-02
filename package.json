@@ -1,6 +1,6 @@
 {
   "name": "@totalpave/cache",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Cache abstraction",
   "main": "lib/api.js",
   "types": "lib/api.d.ts",
