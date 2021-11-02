@@ -3,10 +3,10 @@ import {ICacheData} from './ICacheData';
 import {ICache} from './ICache';
 
 export abstract class SyncCache<T> implements ICache {
-    private _cache: ICacheData<T>;
+    private $cache: ICacheData<T>;
 
     public constructor() {
-        this._cache = {};
+        this.$cache = {};
     }
 
     protected abstract _fetch(key: string): T;
@@ -20,18 +20,18 @@ export abstract class SyncCache<T> implements ICache {
     }
 
     protected _set(key: string, value: T): void {
-        this._cache[key] = value;
+        this.$cache[key] = value;
     }
 
     protected _has(key: string): boolean {
-        return this._cache[key] !== undefined;
+        return this.$cache[key] !== undefined;
     }
 
     protected _get(key: string): T {
-        return this._cache[key];
+        return this.$cache[key];
     }
 
     public invalidate(): void {
-        this._cache = {};
+        this.$cache = {};
     }
 }

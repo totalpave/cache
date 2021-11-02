@@ -14,16 +14,13 @@
         "plugins": [],
         "incremental": true
     },
-    "typedocOptions": {
-        "mode": "modules",
-        "out": "docs"
-    },
     "exclude": [
         "**/*.spec.ts",
         "*/.spec.ts",
         "tests",
         "lib",
         "spec",
-        "node_modules"
+        "node_modules",
+        "jest.config.ts"
     ]
 }
